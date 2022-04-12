@@ -53,7 +53,7 @@ assumption.check <- function(data, phase = NULL, type = NULL){
             dplyr::group_by(Time, Emotion, induction) %>%
             rstatix::shapiro_test(score)
 
-          qplot <- ggpubr::ggqqplot(df, 'score', ggtheme = theme.bw()) +
+          qplot <- ggpubr::ggqqplot(df, 'score', ggtheme = theme_bw()) +
             ggplot2::facet_grid(Emotion + induction ~ Time, labeller = 'label_both')
           print(qplot)
         } else if(type == 'homogeneity'){
