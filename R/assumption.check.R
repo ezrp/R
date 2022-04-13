@@ -42,7 +42,7 @@ assumption.check <- function(data, phase = NULL, type = NULL){
         stop("You have to include 'type' parameter")
       }
     } else if(phase == 'induction'){
-      df <- rptfm::long.data(data,'induction')
+      df <- rptfm::long.data(data,'induction',2)
       if(!is.null(type)){
         if(type == 'outliers'){
           assum.check <- df %>%
