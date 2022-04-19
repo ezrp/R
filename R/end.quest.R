@@ -15,7 +15,7 @@
 end.quest <- function(data, quest = NULL, tabulation = F){
   ifelse(require(magrittr) == T, 'Loaded', 'Not Loaded')
   data <- dplyr::transmute(data, id = id, Gender = Gender, induction = induction,
-                           BDI = BDI, STAXIR = STAXIRASGO, STAIR = STAIR, MRS = MODERN_RACISM, SRS = SYMBOLIC_RACISM)
+                           BDI = BDI, STAXIR = STAXIRASGO, STAIR = STAIR, MRS = MRS, SRS = SRS)
   data <- dplyr::arrange(data, induction, id) %>% na.omit(data)
 
   if(!is.null(quest)){
