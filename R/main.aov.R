@@ -32,7 +32,12 @@ main.aov <- function(data, phase = NULL){
     } else if(phase == 'learning') {
       message('Not coded yet :)')
     } else if(phase == 'transfer') {
-      message('Not coded yet :)')
+      long <- rptfm::long.data(data, phase)
+      
+      aov <- rstatix::anova_test(long, dv = Cooperation, wid = id,
+                                 between = induction, within = GroupBehavior, effect.size = 'pes') %>%
+        rstatix::get_anova_table()
+      
     } else {
       stop('phase only could be baseline, induction, learning, or transfer.')
     }
