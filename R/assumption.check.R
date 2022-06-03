@@ -21,20 +21,15 @@ assumption.check <- function(data, phase = NULL, type = NULL){
       if(!is.null(type)){
         if(type == 'outliers'){
           assum.check <- df %>%
-            dplyr::group_by(PartnerEthnicity, induction) %>%
+            dplyr::group_by(PartnerEthnicity) %>%
             rstatix::identify_outliers(Cooperation)
         } else if(type == 'normality'){
           assum.check <- df %>%
-            dplyr::group_by(PartnerEthnicity, induction) %>%
+            dplyr::group_by(PartnerEthnicity) %>%
             rstatix::shapiro_test(Cooperation)
 
-          qplot <- ggpubr::ggqqplot(df, 'Cooperation', ggtheme = ggplot2::theme_bw()) +
-            ggplot2::facet_grid(PartnerEthnicity ~ induction)
+          qplot <- ggpubr::ggqqplot(df, 'Cooperation', facet.by = 'PartnerEthnicity')
           print(qplot)
-        } else if(type == 'homogeneity'){
-          assum.check <- df %>%
-            dplyr::group_by(PartnerEthnicity) %>%
-            rstatix::levene_test(Cooperation ~ induction)
         } else {
           stop("phase must be 'outliers', 'normality', or 'homogeneity'.")
         }
