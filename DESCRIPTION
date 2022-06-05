@@ -2,7 +2,7 @@ Package: rptfm
 Type: Package
 Title: TFM Functions
 Version: 0.1.0
-Author: ezpejo
+Author: RP
 Maintainer: RP <rjponceg@gmail.com>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
