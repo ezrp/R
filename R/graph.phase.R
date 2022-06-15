@@ -34,7 +34,7 @@ graph.phase <- function(data, phase = NULL, quest = NULL, score = NULL, xlab = N
       graph <- ggpubr::ggline(
         long, x = 'Block', y = 'Cooperation', color = 'GroupBehavior', palette = 'uchicago',
         legend.title = 'Group Behavior', xlab = 'Blocks', ylab = 'Cooperation Rate',
-        error.plot = 'errorbar', add = 'mean', facet.by = c('Consistency', 'induction')
+        error.plot = 'errorbar', add = 'mean', facet.by = c('Consistency')
       )
 
     } else if(phase == 'induction' && !is.null(quest)) {
