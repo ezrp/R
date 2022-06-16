@@ -5,7 +5,7 @@
 #' @param quest Induction questionnaires: EVEA or SAM -> consider upper case.
 #' @param score Dependent variable you'll use, depending on the induction phase questionnaire: anger, sadness, fear, happiness for the EVEA; arousal, valence for the SAM.
 #' @param covariate Variable name to perform ANCOVA: EDS -> consider upper case.
-#' @return anova table of the simple effect according each phase.
+#' @return anova table of the simple effect according each phase. Specially useful in induction phase
 #' @examples
 #' df<-data.frame('your data')
 #' twoWay.aov(df, phase='induction', quest = 'EVEA', score = 'sadness')
