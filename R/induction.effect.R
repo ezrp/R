@@ -1,5 +1,5 @@
 #' @title Induction Effect Anova - induction.effect
-#' @description Effect of Induction at each time point -> Only in induction phase. Also, it can perform simple effect analysis in specific time point.
+#' @description Effect of Induction at each time point -> only in induction phase. Also, it can perform simple effect analysis in specific time point.
 #' @param data data frame
 #' @param quest Induction questionnaires: EVEA or SAM -> consider upper case.
 #' @param score Dependent variable you'll use, depending on the induction phase questionnaire: anger, sadness, fear, happiness for the EVEA; arousal, valence for the SAM.
