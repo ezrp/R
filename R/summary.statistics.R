@@ -1,5 +1,5 @@
 #' @title Summary statistics - summary.statistics
-#' @description it return descriptives for two phases: baseline and induction. You can also input the type to make a summary of the data.
+#' @description It returns descriptives for two phases: baseline and induction. You can also input the type to make a summary of the data.
 #' @param data data frame
 #' @param phase analysis phases. Mandatory parameter, it could be: 'baseline' or 'transfer'.
 #' @param type Output type. It could be: mean_sd, mean, mean_se
